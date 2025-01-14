@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Vaibhav Gajanan Lahase - Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="profile">
+                <img src="Vaibhavimage.jpg" alt="Profile Image" class="profile-img">
+                <h1>Vaibhav Gajanan Lahase</h1>
+                <p>Email: <a href="mailto:vaibhavlahase2002@gmail.com">vaibhavlahase2002@gmail.com</a></p>
+                <p>Phone: <a href="tel:9011360584">9011360584</a></p>
+            </div>
+            <ul>
+                <li><a href="objective.html">Career Objective</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="experience.html">Professional Experience</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="certificates.html">Certificates</a></li>
+                <li><a href="languages.html">Languages</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <button class="dark-mode-toggle" id="darkModeToggle">Toggle Dark Mode</button>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="content">
+        
+            <h2>Welcome to My Homepage!</h2>
+            <p>This is the homepage for Vaibhav Gajanan Lahase. Navigate through the sidebar to check my profile details, skills, education, and more.</p>
+        </div>
+    </div>
+
+    <!-- JavaScript for Dark Mode -->
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+</html>

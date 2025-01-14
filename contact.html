@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="sidebar">
+            <div class="profile">
+                <a href="index.html">
+                <img src="Vaibhavimage.jpg" alt="Profile Image" class="profile-img">
+                </a>
+                <h1>Vaibhav Gajanan Lahase</h1>
+                <p>Email: <a href="mailto:vaibhavlahase2002@gmail.com">vaibhavlahase2002@gmail.com</a></p>
+                <p>Phone: <a href="tel:9011360584">9011360584</a></p>
+            </div>
+            <ul>
+                <li><a href="objective.html">Career Objective</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="experience.html">Professional Experience</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="certificates.html">Certificates</a></li>
+                <li><a href="languages.html">Languages</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <h2>Contact Us</h2>
+            <p>Feel free to reach out for any inquiries or questions. Fill out the form below, and we’ll get back to you as soon as possible.</p>
+
+            <div class="contact-form">
+                <form id="contactForm" onsubmit="return validateForm()">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Mobile Number</label>
+                        <input type="tel" id="phone" placeholder="Enter your mobile number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" placeholder="Enter your message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Form Validation -->
+    <script>
+        function validateForm() {
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let phone = document.getElementById('phone').value;
+            let message = document.getElementById('message').value;
+
+            if (name === '' || email === '' || phone === '' || message === '') {
+                alert('All fields are required.');
+                return false;
+            }
+
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert('Please enter a valid email address.');
+                return false;
+            }
+
+            if (phone.length !== 10 || isNaN(phone)) {
+                alert('Please enter a valid 10-digit mobile number.');
+                return false;
+            }
+
+            alert('Message sent successfully!');
+            return true;
+        }
+    </script>
+</body>
+</html>
